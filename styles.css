@@ -1,0 +1,224 @@
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* GLOBAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --desat-red:hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --gray-red: hsl(0, 6%, 24%);
+
+    --white-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%) );
+    --red-gradient: linear-gradient( 135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+}
+/* REMOVE SCROLLBAR */
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--white-gradient);
+}
+/* CONTAINER */
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+/* HEADER */
+header{
+    padding: 2rem;
+}
+/* DISPLAY MOBILE HERO IMG */
+.mobile-hero{
+    width: 100%;
+}
+/* HIDING DESKTOP HERO IMG */
+.desktop-hero{
+    display: none;
+}
+/* CARD CONTAINER */
+.card{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+/* CARD HEADING */
+.heading{
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    word-spacing: 2px;
+    letter-spacing: 12px;
+}
+/* PINK TEXT */
+.pink-text{
+    font-weight: 300;
+    color: var(--desat-red);
+}
+/* DESCRIPTION */
+.description{
+    color: var(--desat-red);
+    line-height: 24px;
+    word-spacing: 1px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+}
+/* FORM CONTAINER */
+#form{
+
+    padding-bottom: 4rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    position: relative;
+}
+/* INPUT FIELD */
+.email{
+    border-radius: 50px;
+    border: 1px solid var(--desat-red);
+    background-color: var(--white-gradient);
+    width: 100%;
+    height: 50px;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+.email::placeholder{
+    color: hsla(0, 36%, 70%, 0.5);
+}
+/* BUTTON */
+button{
+    background: var(--red-gradient);
+    width: 78px;
+    height: 52px;
+    border: none;
+    border-radius: 35px;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ margin-left: -2.75rem;
+ position: absolute;
+ right: 0;
+ bottom: 62.5px;
+}
+button:hover{
+    background: var(--soft-red);
+    cursor: pointer;
+}
+/* ERROR MESSAGE */
+.errorMsg{
+    display: none;
+    position: absolute;
+    font-size: 1rem;
+    right: 23%;
+    color: var(--soft-red);
+    bottom: 40px;
+}
+/* ERROR ICON */
+.errorIcon{
+    background-image: url('./images/icon-error.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 2rem; 
+    height: 2rem;
+    position: absolute;
+    right: 78px;
+    bottom: 72px;
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 767px) {
+    /* REMOVE OVERFLOW - NO SCROLLING */
+    body{
+        overflow: hidden;
+    }
+    /* LOGO */
+    .logo{
+        margin-left: 8rem;
+        margin-top: 1rem;
+    }
+    header{
+        width: 50%;
+    }
+    /* CONTAINER */
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        }
+        /* CARD */
+        .card{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 2rem;
+             margin-left: 8rem;
+        }
+        /* CARD HEADING */
+    .heading{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-top: -12rem;;
+        padding: 0;
+        text-align: left;
+        letter-spacing: 12px;
+        line-height: 88px;
+    }
+    /* CARD DESCRIPTION */
+    .description{
+        width: 80%;
+        text-align: left;
+
+    }
+    /* INPUT FIELD */
+    .email{
+        width: 75%;
+    }
+    /* HIDING MOBILE HERO IMG */
+    .mobile-hero{
+        display: none;
+    }
+    /* DISPLAYING DESKTOP HERO IMG */
+    .desktop-hero{
+        display: block;
+        width: 50%;
+        min-height: 100vh;
+        margin-top: -15rem;
+
+    }
+    /* BUTTON */
+    button{
+        right: 130px;
+    }
+    /* ERROR ICON */
+    .errorIcon{
+        right: 215px;
+    }
+    /* ERROR MESSAGE */
+    .errorMsg{
+        right: 250px;
+    }
+}
