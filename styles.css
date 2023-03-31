@@ -184,11 +184,12 @@ button:hover {
 		display: flex;
 		flex-direction: column;
 		width: 70%;
-		margin-top: -12rem;
+		margin-top: -8rem;
 		padding: 0;
 		text-align: left;
 		letter-spacing: 12px;
 		line-height: 88px;
+		font-weight: 600;
 	}
 	/* CARD DESCRIPTION */
 	.description {
@@ -206,7 +207,7 @@ button:hover {
 	/* DISPLAYING DESKTOP HERO IMG */
 	.desktop-hero {
 		display: block;
-		width: 80%;
+		width: 60%;
 		min-height: 100vh;
 		margin-top: -15rem;
 	}
